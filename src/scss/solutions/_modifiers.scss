@@ -1,0 +1,13 @@
+@use "../vars" as *;
+
+.t-pink {
+  color: $c-pink;
+}
+
+.t-uc {
+  text-transform: uppercase;
+}
+
+.t-w-700 {
+  font-weight: 700;
+}

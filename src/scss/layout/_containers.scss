@@ -1,0 +1,62 @@
+@use "../vars" as *;
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  // display: flex;
+  &.press {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+  }
+}
+
+.upsell {
+  position: relative;
+}
+
+.upsell-background {
+  max-width: 100%;
+}
+.upsell-content {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+}
+
+// cards
+.showcase-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+.showcase-card {
+  min-width: 245px;
+  &__info {
+    width: auto;
+    width: 100%;
+    background-color: $c-light-gray;
+    padding: 1rem;
+    border-radius: 0 0 15px 15px;
+    &-line {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  img {
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+.section-picture {
+  display: flex;
+}
+
+hr {
+  border: 1px solid $c-light-gray;
+}

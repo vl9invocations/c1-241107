@@ -1,0 +1,36 @@
+@use "../vars" as *;
+
+@each $dimension in $screen-dimensions {
+  @if $dimension >= 992 {
+    @media screen and (min-width: $dimension) {
+      .ctn {
+        margin: 2% auto;
+        max-width: calc($dimension - 10%);
+      }
+    }
+  }
+  @if $dimension <= 991.99 {
+    @media screen and (max-width: $dimension) {
+      .ctn {
+        margin: 2% 7%;
+        max-width: calc($dimension - 10%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 991px) {
+}
+@media screen and (min-width: 992px) {
+}
+@media screen and (min-width: 1200px) {
+  footer {
+    padding: 3% 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+}

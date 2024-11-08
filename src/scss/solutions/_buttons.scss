@@ -1,0 +1,26 @@
+.btn-1 {
+  display: inline-block;
+  padding: 3px;
+  border-radius: 29px;
+  background: linear-gradient(
+    65deg,
+    hsl(349, 76%, 68%) 0%,
+    hsl(24, 82%, 61%) 65%,
+    hsl(24, 81%, 60%) 89%,
+    hsl(67, 72%, 73%) 100%
+  );
+  cursor: pointer;
+
+  &__text {
+    padding: 0.33rem 1.5rem;
+    background-color: hsl(0, 0%, 100%);
+    font-size: 1.05rem;
+    border-radius: 26px;
+    transition: 263ms ease-in-out;
+    overflow: hidden;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

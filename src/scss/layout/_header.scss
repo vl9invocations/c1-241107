@@ -1,0 +1,15 @@
+@use "../vars" as *;
+
+header {
+  color: $c-darker-gray;
+  .header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    nav ul {
+      display: flex;
+      gap: 25px;
+    }
+  }
+}

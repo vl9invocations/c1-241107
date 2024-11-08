@@ -1,0 +1,34 @@
+@use "../vars" as *;
+
+footer {
+  color: $c-dark-gray;
+  padding: 5% 0;
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+
+    .footer-nav {
+      h4 {
+        text-transform: uppercase;
+      }
+    }
+
+    .footer-props {
+      flex-basis: 45%;
+
+      &__social-links {
+        ul {
+          display: flex;
+          gap: 10px;
+        }
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-self: baseline;
+    }
+  }
+}
