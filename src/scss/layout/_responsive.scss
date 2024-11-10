@@ -1,21 +1,8 @@
 @use "../vars" as *;
 
-@each $dimension in $screen-dimensions {
-  @if $dimension >= 992 {
-    @media screen and (min-width: $dimension) {
-      .ctn {
-        width: 80vw;
-        max-width: 1600px;
-      }
-    }
-  }
-  @if $dimension <= 992 {
-    @media screen and (max-width: $dimension) {
-      .ctn {
-        width: 85vw;
-      }
-    }
-  }
+.ctn {
+  width: 85%;
+  max-width: 1440px;
 }
 
 @media screen and (min-width: 576px) {
@@ -37,14 +24,29 @@
     left: -25%;
   }
 
-  .showcase-card {
-    min-width: 325px;
+  .hero {
+    display: flex;
+    align-items: center;
+    .hero-content {
+      min-width: 45%;
+    }
+
+    img {
+      position: static;
+      // right: 0px;/
+      top: 0px;
+      z-index: 0;
+      height: 40%;
+    }
   }
+
   footer .footer {
     flex-direction: row;
 
     .footer-nav {
       display: flex;
+      justify-content: space-between;
+      flex-basis: 50%;
     }
 
     &-bottom {
@@ -60,35 +62,36 @@
   }
 }
 @media screen and (min-width: 992px) {
-  section.press {
+  .press {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
   .upsell-background {
     left: -15%;
   }
-
-  .showcase-card {
-    min-width: 300px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .press {
-    img {
-      display: flex;
+    .small-hidden {
+      display: block;
     }
   }
+
   .upsell-background {
     position: static;
     width: 100%;
     min-height: 350px;
   }
-
-  .showcase-card {
-    min-width: 250px;
-  }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1300px) {
+  .showcase-cards {
+    position: static;
+    justify-content: space-between;
+  }
+  .showcase-card {
+    width: auto;
+  }
 }
 
 .small-hidden {

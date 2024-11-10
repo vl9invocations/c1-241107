@@ -1,7 +1,7 @@
 @use "../vars" as *;
 
 .ctn {
-  margin: 0 auto;
+  margin: auto;
 }
 
 .centered {
@@ -10,42 +10,35 @@
   align-items: center;
 }
 
-section {
-  &.hero {
-    position: relative;
+.hero {
+  position: relative;
 
-    .hero-content {
-      z-index: 10;
-      // padding: 4.5rem 4.5rem 4.5rem 0;
-      max-width: 70%;
-
-      // h2 {}
-    }
-
-    img {
-      position: absolute;
-      right: -140px;
-      top: -40px;
-      z-index: 0;
-      height: 100%;
-    }
+  .hero-content {
+    max-width: 50%;
   }
 
-  &.press {
-    display: grid;
-    align-items: end;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-
-    img {
-      max-width: 100%;
-    }
+  img {
+    position: absolute;
+    right: -140px;
+    top: -40px;
+    z-index: 0;
+    height: 100%;
   }
+}
 
-  &.footer-upsell {
-    display: flex;
-    align-items: center;
+.press {
+  display: grid;
+  align-items: end;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  justify-items: stretch;
+  img {
+    max-width: 100%;
   }
+}
+
+.footer-upsell {
+  display: flex;
 }
 
 .upsell {
@@ -54,6 +47,7 @@ section {
 }
 
 .upsell-background {
+  overflow-x: hidden;
   position: absolute;
   left: -50%;
 }
@@ -71,8 +65,7 @@ section {
   }
 
   &__img {
-    flex-grow: 1;
-    // width: 100%;
+    flex-basis: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,25 +73,35 @@ section {
 }
 
 // cards
-section.showcase {
-  min-height: 475px;
+.showcase {
+  min-height: 500px;
   position: relative;
-  .showcase-cards {
-    position: absolute;
-    display: flex;
-    // justify-content: space-between;
-    gap: 25px;
-    overflow-x: auto;
-    overflow-y: hidden;
-  }
+}
+.showcase-cards {
+  position: absolute;
+  display: flex;
+  gap: 25px;
 }
 .showcase-card {
+  display: block;
   width: 290px;
   height: 400px;
   &__info {
     background-color: $c-light-gray;
+    color: $c-middle-gray;
     padding: 1rem;
     border-radius: 0 0 15px 15px;
+    &-symbol {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: url("assets/eth.svg");
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
     &-line {
       display: flex;
       justify-content: space-between;
@@ -108,11 +111,6 @@ section.showcase {
     width: 100%;
     vertical-align: top;
   }
-}
-
-.section-picture {
-  display: flex;
-  justify-content: space-between;
 }
 
 hr {

@@ -1,0 +1,57 @@
+@use "../vars" as *;
+
+// Text colors
+.t-pink {
+  color: $c-pink;
+}
+
+.t-orange {
+  color: $c-orange;
+}
+
+.t-black {
+  color: $c-darker-gray;
+}
+
+//Text weight
+.t-w-500 {
+  font-weight: 500;
+}
+
+.t-w-700 {
+  font-weight: 700;
+}
+
+.t-weight-900 {
+  font-weight: 900;
+}
+
+// Text sizes
+.t-s-75 {
+  font-size: 0.75rem;
+}
+
+.t-s-112 {
+  font-size: 1.125rem;
+}
+
+.t-s-125 {
+  font-size: 1.25rem;
+}
+
+.t-s-500 {
+  font-size: 5rem;
+}
+
+.t-s-300 {
+  font-size: 3rem;
+}
+
+// Text modifiers
+.t-uc {
+  text-transform: uppercase;
+}
+
+.t-ln-225 {
+  line-height: 1.75rem;
+}

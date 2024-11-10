@@ -19,7 +19,7 @@
     border-radius: 26px;
     transition: 263ms ease-in-out;
     overflow: hidden;
-    text-wrap: nowrap;
+    white-space: nowrap;
 
     &:hover {
       background-color: transparent;
