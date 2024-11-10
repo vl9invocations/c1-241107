@@ -15,15 +15,13 @@ a {
   color: inherit;
 }
 
-html {
+html,
+body {
   font-size: 16px;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 400;
-}
-
-body {
   overflow-x: hidden;
 }
 

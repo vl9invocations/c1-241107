@@ -4,23 +4,19 @@
   margin: auto;
 }
 
-.centered {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .hero {
   position: relative;
+  display: flex;
+  justify-content: space-between;
 
   .hero-content {
-    max-width: 50%;
+    flex-basis: 60%;
+    z-index: 100;
   }
 
   img {
     position: absolute;
-    right: -140px;
-    top: -40px;
+    left: 50%;
     z-index: 0;
     height: 100%;
   }
@@ -37,24 +33,26 @@
   }
 }
 
-.footer-upsell {
-  display: flex;
-}
-
 .upsell {
   position: relative;
-  min-height: 350px;
+  height: 340px;
 }
 
 .upsell-background {
   overflow-x: hidden;
   position: absolute;
   left: -50%;
+
+  img {
+    min-height: 340px;
+    width: 100%;
+  }
 }
 .upsell-content {
   position: absolute;
-  top: 50%;
-  left: 5%;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-140%);
 }
 
 .footer-upsell {
@@ -78,14 +76,11 @@
   position: relative;
 }
 .showcase-cards {
-  position: absolute;
   display: flex;
   gap: 25px;
 }
 .showcase-card {
-  display: block;
-  width: 290px;
-  height: 400px;
+  min-width: 290px;
   &__info {
     background-color: $c-light-gray;
     color: $c-middle-gray;
@@ -115,4 +110,8 @@
 
 hr {
   border: 1px solid $c-light-gray;
+}
+
+.small-hidden {
+  display: none;
 }

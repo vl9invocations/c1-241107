@@ -1,8 +1,8 @@
 .btn-1 {
-  margin: 25px 0;
+  margin: 2rem 0;
   display: inline-block;
   padding: 3px;
-  border-radius: 29px;
+  border-radius: 53px;
   background: linear-gradient(
     65deg,
     hsl(349, 76%, 68%) 0%,
@@ -13,10 +13,10 @@
   cursor: pointer;
 
   &__text {
-    padding: 0.75rem 2rem;
+    padding: 0.85rem 2rem;
     background-color: hsl(0, 0%, 100%);
-    font-size: 1.05rem;
-    border-radius: 26px;
+    font-size: 1.5rem;
+    border-radius: 50px;
     transition: 263ms ease-in-out;
     overflow: hidden;
     white-space: nowrap;

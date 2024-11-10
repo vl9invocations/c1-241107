@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../vars" as *;
 
 .ctn {
@@ -5,13 +6,18 @@
   max-width: 1440px;
 }
 
-@media screen and (min-width: 576px) {
-  section.press {
+@media screen and (min-width: map.get($screen-dimensions, "mobile")) {
+  .hero {
+    .hero-content {
+      align-items: center;
+    }
+  }
+  .press {
     justify-items: center;
   }
 }
-@media screen and (min-width: 768px) {
-  header .header {
+@media screen and (min-width: map.get($screen-dimensions, "tablet")) {
+  .header {
     nav ul {
       display: flex;
     }
@@ -19,28 +25,43 @@
       display: none;
     }
   }
+  .hero {
+    .hero-content {
+      align-items: center;
+      flex-basis: 60%;
+    }
+    img {
+      position: static;
+      width: 100%;
+    }
+  }
 
   .upsell-background {
     left: -25%;
   }
-
+}
+@media screen and (min-width: map.get($screen-dimensions, "laptop")) {
   .hero {
-    display: flex;
     align-items: center;
-    .hero-content {
-      min-width: 45%;
-    }
 
     img {
-      position: static;
-      // right: 0px;/
+      // position: static;
       top: 0px;
-      z-index: 0;
-      height: 40%;
+      right: 0px;
+      // height: 100%;
     }
   }
 
-  footer .footer {
+  .press {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .upsell-background {
+    left: -15%;
+  }
+
+  .footer {
     flex-direction: row;
 
     .footer-nav {
@@ -61,17 +82,7 @@
     }
   }
 }
-@media screen and (min-width: 992px) {
-  .press {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .upsell-background {
-    left: -15%;
-  }
-}
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: map.get($screen-dimensions, "desktop")) {
   .press {
     .small-hidden {
       display: block;
@@ -84,16 +95,11 @@
     min-height: 350px;
   }
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: map.get($screen-dimensions, "tv")) {
   .showcase-cards {
-    position: static;
     justify-content: space-between;
   }
   .showcase-card {
-    width: auto;
+    width: 350px;
   }
-}
-
-.small-hidden {
-  display: none;
 }

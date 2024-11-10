@@ -1,23 +1,21 @@
 @use "../vars" as *;
 
-footer {
-  .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    .footer-nav {
-      display: grid;
-      gap: 25px;
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .footer-nav {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .footer-props {
-      &__social-links {
-        ul {
-          display: flex;
-          gap: 10px;
-        }
+  .footer-props {
+    &__social-links {
+      ul {
+        display: flex;
+        gap: 10px;
       }
     }
   }

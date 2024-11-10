@@ -1,1 +1,9 @@
-$screen-dimensions: 576px, 768px, 992px, 1200px, 1400px;
+@use "sass:map";
+
+$screen-dimensions: (
+  "mobile": 576px,
+  "tablet": 768px,
+  "laptop": 992px,
+  "desktop": 1200px,
+  "tv": 1400px,
+);

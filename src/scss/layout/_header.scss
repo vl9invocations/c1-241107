@@ -2,17 +2,20 @@
 
 header {
   color: $c-darker-gray;
-  .header {
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    nav ul {
+}
+
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  nav {
+    ul {
       display: none;
       gap: 25px;
     }
 
-    nav .burger-menu {
+    .burger-menu {
       transform: rotateZ(90deg);
       span {
         border-radius: 5px;
