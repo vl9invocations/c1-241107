@@ -1,5 +1,9 @@
 @use "../vars" as *;
 
+.ctn {
+  margin: 0 auto;
+}
+
 .centered {
   display: flex;
   flex-direction: column;
@@ -7,20 +11,51 @@
 }
 
 section {
-  // display: flex;
+  &.hero {
+    position: relative;
+
+    .hero-content {
+      z-index: 10;
+      // padding: 4.5rem 4.5rem 4.5rem 0;
+      max-width: 70%;
+
+      // h2 {}
+    }
+
+    img {
+      position: absolute;
+      right: -140px;
+      top: -40px;
+      z-index: 0;
+      height: 100%;
+    }
+  }
+
   &.press {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    align-items: end;
+    grid-template-columns: 1fr 1fr;
     gap: 25px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &.footer-upsell {
+    display: flex;
+    align-items: center;
   }
 }
 
 .upsell {
   position: relative;
+  min-height: 350px;
 }
 
 .upsell-background {
-  max-width: 100%;
+  position: absolute;
+  left: -50%;
 }
 .upsell-content {
   position: absolute;
@@ -28,17 +63,39 @@ section {
   left: 5%;
 }
 
-// cards
-.showcase-cards {
+.footer-upsell {
   display: flex;
-  justify-content: space-between;
-  gap: 25px;
+
+  &__content {
+    flex: 50%;
+  }
+
+  &__img {
+    flex-grow: 1;
+    // width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// cards
+section.showcase {
+  min-height: 475px;
+  position: relative;
+  .showcase-cards {
+    position: absolute;
+    display: flex;
+    // justify-content: space-between;
+    gap: 25px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
 }
 .showcase-card {
-  min-width: 245px;
+  width: 290px;
+  height: 400px;
   &__info {
-    width: auto;
-    width: 100%;
     background-color: $c-light-gray;
     padding: 1rem;
     border-radius: 0 0 15px 15px;
@@ -55,6 +112,7 @@ section {
 
 .section-picture {
   display: flex;
+  justify-content: space-between;
 }
 
 hr {

@@ -2,13 +2,18 @@
 
 footer {
   color: $c-dark-gray;
-  padding: 5% 0;
+  // padding: 5% 0;
 
   .footer {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 
     .footer-nav {
+      display: grid;
+      gap: 25px;
+      grid-template-columns: repeat(2, 1fr);
+
       h4 {
         text-transform: uppercase;
       }
@@ -23,12 +28,6 @@ footer {
           gap: 10px;
         }
       }
-    }
-
-    &-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-self: baseline;
     }
   }
 }

@@ -8,8 +8,20 @@ header {
     justify-content: space-between;
     align-items: center;
     nav ul {
-      display: flex;
+      display: none;
       gap: 25px;
+    }
+
+    nav .burger-menu {
+      transform: rotateZ(90deg);
+      span {
+        border-radius: 5px;
+        background-color: $c-gray;
+        width: 55px;
+        height: 100px;
+        padding: 2px;
+        margin: 2px;
+      }
     }
   }
 }

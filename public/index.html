@@ -17,12 +17,12 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>NFT Startup Landing Page</title>
+    <title>NFT Startup</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
-    <header>
-      <div class="ctn header">
+    <header class="ctn">
+      <div class="header">
         <h1><img src="assets/logo.svg" alt="nftlanding" /></h1>
         <nav>
           <ul>
@@ -31,18 +31,23 @@
             <li><a href="#">Launch</a></li>
             <li><a class="t-pink" href="#">Sign Up</a></li>
           </ul>
+          <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </nav>
       </div>
     </header>
 
-    <main>
-      <section class="ctn hero section-picture">
-        <div>
+    <main class="ctn">
+      <section class="hero section-picture">
+        <div class="hero-content">
           <span class="t-pink t-uc t-w-700">Launching soon</span>
-          <h2>An NFT like <wbr />no other</h2>
+          <h2 class="text-3r t-weight-900">An NFT like <wbr />no other</h2>
           <p>
-            Don’t miss out on the release of our new NFT. Sign up below to
-            receive updates when we go live.
+            Don’t miss out on the <wbr /> release of our new NFT. Sign up below
+            to receive updates when we go live.
           </p>
           <a href="#">
             <div class="btn-1">
@@ -56,7 +61,7 @@
         <img src="assets/graphic.svg" alt="" />
       </section>
 
-      <section class="ctn upsell">
+      <section class="upsell">
         <img class="upsell-background" alt="" src="assets/background.svg" />
 
         <div class="upsell-content">
@@ -65,15 +70,19 @@
         </div>
       </section>
 
-      <section class="ctn press">
+      <section class="press">
         <img src="assets/companies/1.svg" alt="Boomerang logo" />
         <img src="assets/companies/2.svg" alt="Blimp logo" />
         <img src="assets/companies/3.svg" alt="qrco logo" />
-        <img src="assets/companies/4.svg" alt="OpenDoor logo" />
+        <img
+          class="small-hidden"
+          src="assets/companies/4.svg"
+          alt="OpenDoor logo"
+        />
         <img src="assets/companies/5.svg" alt="Droplet logo" />
       </section>
 
-      <section class="ctn showcase">
+      <section class="showcase">
         <h3>LE Super Rare Auction</h3>
         <p>
           We have released four limited edition NFTs early which can be bid on
@@ -155,8 +164,10 @@
       <div class="ctn">
         <hr />
       </div>
-      <section class="ctn footer-upsell section-picture">
-        <div>
+    </main>
+    <footer class="ctn">
+      <section class="footer-upsell section-picture">
+        <div class="footer-upsell__content">
           <span class="t-pink t-uc t-w-700">Launching soon</span>
           <h2>An NFT like <wbr />no other</h2>
           <p>
@@ -171,14 +182,14 @@
             </div>
           </a>
         </div>
-        <img src="assets/upsell-footer-image.svg" alt="" />
+        <div class="footer-upsell__img">
+          <img src="assets/upsell-footer-image.svg" alt="" />
+        </div>
       </section>
-    </main>
 
-    <div class="ctn">
-      <hr />
-    </div>
-    <footer>
+      <div class="ctn">
+        <hr />
+      </div>
       <div class="footer ctn">
         <div class="footer-props">
           <h4 class="footer-props__title">
@@ -208,40 +219,42 @@
             </ul>
           </div>
         </div>
-        <nav class="footer-nav">
-          <h4>About</h4>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Legal</a></li>
-          </ul>
-        </nav>
-        <nav class="footer-nav">
-          <h4>NFT</h4>
-          <ul>
-            <li><a href="#">OpenSea</a></li>
-            <li><a href="#">Maker</a></li>
-            <li><a href="#">Learn</a></li>
-          </ul>
-        </nav>
-        <nav class="footer-nav">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Support</a></li>
-          </ul>
-        </nav>
-        <nav class="footer-nav">
-          <h4>Social</h4>
-          <ul>
-            <li><a href="https://x.com">Twitter</a></li>
-            <li><a href="https://www.instagram.com">Instagram</a></li>
-          </ul>
-        </nav>
+        <div class="footer-nav">
+          <nav class="footer-nav__item">
+            <h4>About</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Legal</a></li>
+            </ul>
+          </nav>
+          <nav class="footer-nav__item">
+            <h4>NFT</h4>
+            <ul>
+              <li><a href="#">OpenSea</a></li>
+              <li><a href="#">Maker</a></li>
+              <li><a href="#">Learn</a></li>
+            </ul>
+          </nav>
+          <nav class="footer-nav__item">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </nav>
+          <nav class="footer-nav__item">
+            <h4>Social</h4>
+            <ul>
+              <li><a href="https://x.com">Twitter</a></li>
+              <li><a href="https://www.instagram.com">Instagram</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
       <div class="footer-bottom ctn">
         <p>© Copyright 2022 NFTlanding</p>
-        <p>Launching August 2022</p>
+        <p class="small-hidden">Launching August 2022</p>
       </div>
     </footer>
   </body>
