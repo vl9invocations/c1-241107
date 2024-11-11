@@ -164,34 +164,20 @@ header {
   flex-direction: column;
   justify-content: space-between;
 }
-.footer .footer-nav {
+.footer__nav {
   display: grid;
-  gap: 25px;
+  gap: 1.5rem;
   grid-template-columns: repeat(2, 1fr);
 }
-.footer .footer-props__social-links ul {
+.footer__props-social ul {
   display: flex;
-  gap: 10px;
+  gap: 0.75rem;
 }
 
 .ctn {
   margin: auto;
-}
-
-.hero {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-.hero .hero-content {
-  flex-basis: 60%;
-  z-index: 100;
-}
-.hero img {
-  position: absolute;
-  left: 50%;
-  z-index: 0;
-  height: 100%;
+  width: 85%;
+  max-width: 1440px;
 }
 
 .press {
@@ -205,32 +191,18 @@ header {
   max-width: 100%;
 }
 
-.upsell {
-  position: relative;
-  min-height: 360px;
-}
-
-.upsell-background {
-  position: absolute;
-  overflow: hidden;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 20px;
-}
-
-.upsell-content {
-  position: absolute;
-  z-index: 999;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
+.hero,
 .footer-upsell {
   display: flex;
 }
+.hero__content,
 .footer-upsell__content {
   flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+.hero__img,
 .footer-upsell__img {
   transform: translateX(25%);
   flex-basis: 45%;
@@ -239,42 +211,58 @@ header {
   align-items: center;
 }
 
+.upsell {
+  position: relative;
+  min-height: 360px;
+}
+.upsell__background {
+  position: absolute;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+.upsell__content {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .showcase {
   min-height: 500px;
   position: relative;
 }
-
-.showcase-cards {
+.showcase__cards {
   display: flex;
   gap: 25px;
 }
-
-.showcase-card {
+.showcase__card {
   min-width: 290px;
 }
-.showcase-card__info {
+.showcase__card img {
+  width: 100%;
+  vertical-align: top;
+}
+.showcase__card-info {
   background-color: hsl(0, 0%, 93%);
   color: hsl(0, 0%, 47%);
   padding: 1rem;
   border-radius: 0 0 15px 15px;
 }
-.showcase-card__info-symbol {
+.showcase__card-info__line {
+  display: flex;
+  justify-content: space-between;
+}
+.showcase__card-info__line--symbol {
   position: relative;
 }
-.showcase-card__info-symbol::before {
+.showcase__card-info__line--symbol::before {
   position: absolute;
   content: url("assets/eth.svg");
   left: -15px;
   top: 50%;
   transform: translateY(-50%);
-}
-.showcase-card__info-line {
-  display: flex;
-  justify-content: space-between;
-}
-.showcase-card img {
-  width: 100%;
-  vertical-align: top;
 }
 
 hr {
@@ -285,15 +273,7 @@ hr {
   display: none;
 }
 
-.ctn {
-  width: 85%;
-  max-width: 1440px;
-}
-
 @media screen and (min-width: 576px) {
-  .hero .hero-content {
-    align-items: center;
-  }
   .press {
     justify-items: center;
   }
@@ -305,30 +285,16 @@ hr {
   .header nav .burger-menu {
     display: none;
   }
-  .upsell-content {
+  .upsell__content {
     top: 40%;
     transform: translateY(-10%);
   }
-  .hero {
-    align-items: center;
-  }
-  .hero .hero-content {
-    align-items: center;
-    flex-basis: 60%;
-  }
-  .hero img {
-    position: static;
-    width: 100%;
-  }
+  .hero__img,
   .footer-upsell__img {
     transform: translateX(0%);
   }
 }
 @media screen and (min-width: 992px) {
-  .hero img {
-    top: 0px;
-    right: 0px;
-  }
   .press {
     display: flex;
     flex-direction: row;
@@ -337,18 +303,18 @@ hr {
   .footer {
     flex-direction: row;
   }
-  .footer .footer-nav {
+  .footer__nav {
     display: flex;
     justify-content: space-between;
     flex-basis: 50%;
   }
-  .footer-bottom {
+  .footer__bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-self: baseline;
   }
-  .footer-bottom .small-hidden {
+  .footer__bottom .small-hidden {
     display: block;
   }
 }
@@ -356,10 +322,10 @@ hr {
   .press .small-hidden {
     display: block;
   }
-  .upsell-content {
+  .upsell__content {
     left: 5%;
   }
-  .upsell-background, .upsell-background > img {
+  .upsell__background, .upsell__background > img {
     width: 100%;
   }
 }
@@ -367,10 +333,10 @@ hr {
   .upsell {
     min-height: 400px;
   }
-  .showcase-cards {
+  .showcase__cards {
     justify-content: space-between;
   }
-  .showcase-card {
+  .showcase__card {
     width: 350px;
   }
 }

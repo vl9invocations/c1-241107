@@ -5,17 +5,17 @@
   flex-direction: column;
   justify-content: space-between;
 
-  .footer-nav {
+  &__nav {
     display: grid;
-    gap: 25px;
+    gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .footer-props {
-    &__social-links {
+  &__props {
+    &-social {
       ul {
         display: flex;
-        gap: 10px;
+        gap: 0.75rem;
       }
     }
   }

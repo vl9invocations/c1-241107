@@ -2,24 +2,8 @@
 
 .ctn {
   margin: auto;
-}
-
-.hero {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-
-  .hero-content {
-    flex-basis: 60%;
-    z-index: 100;
-  }
-
-  img {
-    position: absolute;
-    left: 50%;
-    z-index: 0;
-    height: 100%;
-  }
+  width: 85%;
+  max-width: 1440px;
 }
 
 .press {
@@ -33,31 +17,19 @@
   }
 }
 
-.upsell {
-  position: relative;
-  min-height: 360px;
-}
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>  HERO & UPSELL_f  >>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-.upsell-background {
-  position: absolute;
-  overflow: hidden;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 20px;
-}
-
-.upsell-content {
-  position: absolute;
-  z-index: 999;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
+.hero,
 .footer-upsell {
   display: flex;
 
   &__content {
     flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &__img {
@@ -69,44 +41,74 @@
   }
 }
 
-// cards
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>  UPSELL_top  >>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.upsell {
+  position: relative;
+  min-height: 360px;
+
+  &__background {
+    position: absolute;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+  }
+
+  &__content {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>  SHOWCASE  >>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 .showcase {
   min-height: 500px;
   position: relative;
-}
-.showcase-cards {
-  display: flex;
-  gap: 25px;
-}
-.showcase-card {
-  min-width: 290px;
-  &__info {
-    background-color: $c-light-gray;
-    color: $c-middle-gray;
-    padding: 1rem;
-    border-radius: 0 0 15px 15px;
-    &-symbol {
-      position: relative;
-      &::before {
-        position: absolute;
-        content: url("assets/eth.svg");
-        left: -15px;
-        top: 50%;
-        transform: translateY(-50%);
+  &__cards {
+    display: flex;
+    gap: 25px;
+  }
+  &__card {
+    min-width: 290px;
+
+    img {
+      width: 100%;
+      vertical-align: top;
+    }
+
+    &-info {
+      background-color: $c-light-gray;
+      color: $c-middle-gray;
+      padding: 1rem;
+      border-radius: 0 0 15px 15px;
+
+      &__line {
+        display: flex;
+        justify-content: space-between;
+
+        &--symbol {
+          position: relative;
+          &::before {
+            position: absolute;
+            content: url("assets/eth.svg");
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
       }
     }
-
-    &-line {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-  img {
-    width: 100%;
-    vertical-align: top;
   }
 }
 
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 hr {
   border: 1px solid $c-light-gray;
 }

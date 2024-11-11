@@ -1,21 +1,18 @@
 @use "sass:map";
 @use "../vars" as *;
 
-.ctn {
-  width: 85%;
-  max-width: 1440px;
-}
-
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>  MOBILE  >>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @media screen and (min-width: map.get($screen-dimensions, "mobile")) {
-  .hero {
-    .hero-content {
-      align-items: center;
-    }
-  }
   .press {
     justify-items: center;
   }
 }
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>  TABLET  >>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @media screen and (min-width: map.get($screen-dimensions, "tablet")) {
   .header {
     nav ul {
@@ -26,35 +23,23 @@
     }
   }
 
-  .upsell-content {
-      top: 40%;
-      transform: translateY(-10%);
+  .upsell__content {
+    top: 40%;
+    transform: translateY(-10%);
   }
 
-  .hero {
-        align-items: center;
-    .hero-content {
-      align-items: center;
-      flex-basis: 60%;
+  .hero,
+  .footer-upsell {
+    &__img {
+      transform: translateX(0%);
     }
-    img {
-      position: static;
-      width: 100%;
-    }
-  }
-  .footer-upsell__img {
-        transform: translateX(0%);
   }
 }
 
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>  LAPTOP  >>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @media screen and (min-width: map.get($screen-dimensions, "laptop")) {
-  .hero {
-    img {
-      top: 0px;
-      right: 0px;
-    }
-  }
-
   .press {
     display: flex;
     flex-direction: row;
@@ -64,24 +49,28 @@
   .footer {
     flex-direction: row;
 
-    .footer-nav {
+    &__nav {
       display: flex;
       justify-content: space-between;
       flex-basis: 50%;
     }
 
-    &-bottom {
-      .small-hidden {
-        display: block;
-      }
-
+    &__bottom {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-self: baseline;
+
+      .small-hidden {
+        display: block;
+      }
     }
   }
 }
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>  DESKTOP >>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @media screen and (min-width: map.get($screen-dimensions, "desktop")) {
   .press {
     .small-hidden {
@@ -89,24 +78,33 @@
     }
   }
 
-  .upsell-content {
-    left: 5%;
-  }
+  .upsell {
+    &__content {
+      left: 5%;
+    }
 
-  .upsell-background, .upsell-background > img {
+    &__background,
+    &__background > img {
       width: 100%;
+    }
   }
 }
 
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>  TV  >>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @media screen and (min-width: map.get($screen-dimensions, "tv")) {
   .upsell {
-      min-height: 400px;
+    min-height: 400px;
+  }
+
+  .showcase {
+    &__cards {
+      justify-content: space-between;
     }
 
-  .showcase-cards {
-    justify-content: space-between;
-  }
-  .showcase-card {
-    width: 350px;
+    &__card {
+      width: 350px;
+    }
   }
 }
