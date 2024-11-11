@@ -39,12 +39,24 @@
   font-size: 1.25rem;
 }
 
-.t-s-500 {
-  font-size: 5rem;
+.t-s-200 {
+  font-size: 2rem;
 }
 
 .t-s-300 {
   font-size: 3rem;
+}
+
+.t-s-500 {
+  font-size: 5rem;
+}
+
+.t-s-rs-title {
+  @media screen {
+    
+  }
+
+  font-size: 6rem;
 }
 
 // Text modifiers

@@ -25,7 +25,14 @@
       display: none;
     }
   }
+
+  .upsell-content {
+      top: 40%;
+      transform: translateY(-10%);
+  }
+
   .hero {
+        align-items: center;
     .hero-content {
       align-items: center;
       flex-basis: 60%;
@@ -35,12 +42,13 @@
       width: 100%;
     }
   }
+  .footer-upsell__img {
+        transform: translateX(0%);
+  }
 }
 
 @media screen and (min-width: map.get($screen-dimensions, "laptop")) {
   .hero {
-    align-items: center;
-
     img {
       top: 0px;
       right: 0px;

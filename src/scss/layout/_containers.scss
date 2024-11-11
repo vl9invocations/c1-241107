@@ -48,10 +48,9 @@
 
 .upsell-content {
   position: absolute;
-  z-index: 55;
-  top: 40%;
-  // left: 50%;
-  // transform: translateX(-140%);
+  z-index: 999;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .footer-upsell {
@@ -62,6 +61,7 @@
   }
 
   &__img {
+    transform: translateX(25%);
     flex-basis: 45%;
     display: flex;
     justify-content: center;
