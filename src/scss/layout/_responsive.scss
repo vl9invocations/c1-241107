@@ -5,6 +5,11 @@
 // >>>>>>>>>>>>>>>>  MOBILE  >>>>>>>>>>>>>>>>
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @media screen and (min-width: map.get($screen-dimensions, "mobile")) {
+  .hero {
+    &__img-absolute {
+      transform: translate(-25%, -5%);
+    }
+  }
   .press {
     justify-items: center;
   }
@@ -23,16 +28,23 @@
     }
   }
 
-  .upsell__content {
-    top: 40%;
-    transform: translateY(-10%);
-  }
-
   .hero,
   .footer-upsell {
+    &__content {
+      justify-content: center;
+    }
     &__img {
       transform: translateX(0%);
     }
+
+    &__img-absolute {
+      transform: translate(0, -5%);
+    }
+  }
+
+  .upsell__content {
+    top: 40%;
+    transform: translateY(-10%);
   }
 }
 
@@ -40,6 +52,12 @@
 // >>>>>>>>>>>>>>>>  LAPTOP  >>>>>>>>>>>>>>>>
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @media screen and (min-width: map.get($screen-dimensions, "laptop")) {
+  .hero {
+    &__img-absolute {
+      transform: translate(5%, 0);
+    }
+  }
+
   .press {
     display: flex;
     flex-direction: row;
@@ -72,6 +90,12 @@
 // >>>>>>>>>>>>>>>>  DESKTOP >>>>>>>>>>>>>>>>
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @media screen and (min-width: map.get($screen-dimensions, "desktop")) {
+  .ctn-desktop {
+    margin: auto;
+    width: 85%;
+    max-width: 1440px;
+  }
+
   .press {
     .small-hidden {
       display: block;
@@ -94,6 +118,12 @@
 // >>>>>>>>>>>>>>>>>>  TV  >>>>>>>>>>>>>>>>>>
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @media screen and (min-width: map.get($screen-dimensions, "tv")) {
+  .hero {
+    &__img-absolute {
+      position: static;
+    }
+  }
+
   .upsell {
     min-height: 400px;
   }

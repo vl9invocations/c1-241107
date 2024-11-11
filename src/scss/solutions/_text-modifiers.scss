@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../vars" as *;
 
 // Text colors
@@ -7,6 +8,14 @@
 
 .t-orange {
   color: $c-orange;
+}
+
+.t-gray {
+  color: $c-gray;
+}
+
+.t-dark-gray {
+  color: $c-dark-gray;
 }
 
 .t-black {
@@ -22,7 +31,7 @@
   font-weight: 700;
 }
 
-.t-weight-900 {
+.t-w-900 {
   font-weight: 900;
 }
 
@@ -52,11 +61,11 @@
 }
 
 .t-s-rs-title {
-  @media screen {
-    
-  }
+  font-size: 3rem;
 
-  font-size: 6rem;
+  @media screen and (min-width: map.get($screen-dimensions, "laptop")) {
+    font-size: 5rem;
+  }
 }
 
 // Text modifiers

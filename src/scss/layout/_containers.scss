@@ -9,7 +9,7 @@
 .press {
   display: grid;
   align-items: end;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 25px;
   justify-items: stretch;
   img {
@@ -24,20 +24,33 @@
 .hero,
 .footer-upsell {
   display: flex;
+  gap: 0.2rem;
+
+  &__content,
+  &__img {
+    display: flex;
+  }
 
   &__content {
-    flex: 50%;
-    display: flex;
+    flex-basis: 50%;
     flex-direction: column;
-    justify-content: center;
   }
 
   &__img {
-    transform: translateX(25%);
-    flex-basis: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-basis: 50%;
+    position: relative;
+    &-container {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+
+    &-absolute {
+      position: absolute;
+      height: 100%;
+      transform: translate(-55%, -5%);
+      z-index: 0;
+    }
   }
 }
 
@@ -47,10 +60,14 @@
 
 .upsell {
   position: relative;
-  min-height: 360px;
+  min-height: 300px;
+
+  &__background,
+  &__content {
+    position: absolute;
+  }
 
   &__background {
-    position: absolute;
     overflow: hidden;
     left: 50%;
     transform: translateX(-50%);
@@ -58,7 +75,6 @@
   }
 
   &__content {
-    position: absolute;
     z-index: 999;
     top: 50%;
     transform: translateY(-50%);
@@ -109,8 +125,10 @@
 }
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-hr {
-  border: 1px solid $c-light-gray;
+.divider {
+  height: 2px;
+  width: 100vw;
+  background-color: $c-light-gray;
 }
 
 .small-hidden {
