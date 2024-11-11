@@ -35,24 +35,23 @@
 
 .upsell {
   position: relative;
-  height: 340px;
+  min-height: 360px;
 }
 
 .upsell-background {
-  overflow-x: hidden;
   position: absolute;
-  left: -50%;
-
-  img {
-    min-height: 340px;
-    width: 100%;
-  }
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
 }
+
 .upsell-content {
   position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translateX(-140%);
+  z-index: 55;
+  top: 40%;
+  // left: 50%;
+  // transform: translateX(-140%);
 }
 
 .footer-upsell {

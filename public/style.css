@@ -200,24 +200,21 @@ header {
 
 .upsell {
   position: relative;
-  height: 340px;
+  min-height: 360px;
 }
 
 .upsell-background {
-  overflow-x: hidden;
   position: absolute;
-  left: -50%;
-}
-.upsell-background img {
-  min-height: 340px;
-  width: 100%;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
 }
 
 .upsell-content {
   position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translateX(-140%);
+  z-index: 55;
+  top: 40%;
 }
 
 .footer-upsell {
@@ -307,9 +304,6 @@ hr {
     position: static;
     width: 100%;
   }
-  .upsell-background {
-    left: -25%;
-  }
 }
 @media screen and (min-width: 992px) {
   .hero {
@@ -323,9 +317,6 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
-  .upsell-background {
-    left: -15%;
   }
   .footer {
     flex-direction: row;
@@ -349,13 +340,17 @@ hr {
   .press .small-hidden {
     display: block;
   }
-  .upsell-background {
-    position: static;
+  .upsell-content {
+    left: 5%;
+  }
+  .upsell-background, .upsell-background > img {
     width: 100%;
-    min-height: 350px;
   }
 }
 @media screen and (min-width: 1400px) {
+  .upsell {
+    min-height: 400px;
+  }
   .showcase-cards {
     justify-content: space-between;
   }

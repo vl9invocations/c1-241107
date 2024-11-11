@@ -35,20 +35,15 @@
       width: 100%;
     }
   }
-
-  .upsell-background {
-    left: -25%;
-  }
 }
+
 @media screen and (min-width: map.get($screen-dimensions, "laptop")) {
   .hero {
     align-items: center;
 
     img {
-      // position: static;
       top: 0px;
       right: 0px;
-      // height: 100%;
     }
   }
 
@@ -56,9 +51,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
-  .upsell-background {
-    left: -15%;
   }
 
   .footer {
@@ -89,13 +81,20 @@
     }
   }
 
-  .upsell-background {
-    position: static;
-    width: 100%;
-    min-height: 350px;
+  .upsell-content {
+    left: 5%;
+  }
+
+  .upsell-background, .upsell-background > img {
+      width: 100%;
   }
 }
+
 @media screen and (min-width: map.get($screen-dimensions, "tv")) {
+  .upsell {
+      min-height: 400px;
+    }
+
   .showcase-cards {
     justify-content: space-between;
   }
