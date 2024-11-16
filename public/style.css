@@ -166,33 +166,23 @@ header {
   display: flex;
   gap: 25px;
   overflow-x: scroll;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
 }
-.showcase__card {
-  min-width: 290px;
+.showcase__cards::-webkit-scrollbar {
+  width: 5px;
 }
-.showcase__card img {
-  width: 100%;
-  vertical-align: top;
+.showcase__cards::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
-.showcase__card-info {
-  background-color: hsl(0, 0%, 93%);
-  color: hsl(0, 0%, 47%);
-  padding: 1rem;
-  border-radius: 0 0 15px 15px;
+.showcase__cards::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #888;
 }
-.showcase__card-info__line {
-  display: flex;
-  justify-content: space-between;
-}
-.showcase__card-info__line--symbol {
-  position: relative;
-}
-.showcase__card-info__line--symbol::before {
-  position: absolute;
-  content: url("assets/eth.svg");
-  left: -15px;
-  top: 50%;
-  transform: translateY(-50%);
+.showcase__cards::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .divider {
@@ -268,10 +258,10 @@ header {
   .ctn-desktop,
   .ctn-desktop-padding {
     padding: 0;
+    overflow: hidden;
     margin: auto;
     width: 85%;
     max-width: 1440px;
-    overflow-x: hidden;
   }
   .press .small-hidden {
     display: block;
@@ -283,9 +273,12 @@ header {
     width: 100%;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1470px) {
   .hero__img-absolute {
     position: static;
+  }
+  .showcase__cards {
+    overflow-x: hidden;
   }
   .upsell {
     min-height: 400px;
@@ -422,6 +415,35 @@ header {
 
 .a-link {
   text-decoration: underline;
+}
+
+.showcase__card {
+  min-width: 290px;
+}
+.showcase__card img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.showcase__card-info {
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(0, 0%, 47%);
+  padding: 1rem;
+  border-radius: 0 0 15px 15px;
+}
+.showcase__card-info__line {
+  display: flex;
+  justify-content: space-between;
+}
+.showcase__card-info__line--symbol {
+  position: relative;
+}
+.showcase__card-info__line--symbol::before {
+  position: absolute;
+  content: url("assets/eth.svg");
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*# sourceMappingURL=style.css.map */

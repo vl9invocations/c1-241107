@@ -95,36 +95,26 @@
     display: flex;
     gap: 25px;
     overflow-x: scroll;
-  }
-  &__card {
-    min-width: 290px;
 
-    img {
-      width: 100%;
-      vertical-align: top;
+    /* width */
+    &::-webkit-scrollbar {
+      width: 5px;
     }
 
-    &-info {
-      background-color: $c-light-gray;
-      color: $c-middle-gray;
-      padding: 1rem;
-      border-radius: 0 0 15px 15px;
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
 
-      &__line {
-        display: flex;
-        justify-content: space-between;
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background: #888;
+    }
 
-        &--symbol {
-          position: relative;
-          &::before {
-            position: absolute;
-            content: url("assets/eth.svg");
-            left: -15px;
-            top: 50%;
-            transform: translateY(-50%);
-          }
-        }
-      }
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
     }
   }
 }

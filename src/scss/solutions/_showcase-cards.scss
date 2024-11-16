@@ -1,0 +1,34 @@
+@use "../vars" as *;
+
+.showcase__card {
+  min-width: 290px;
+
+  img {
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+.showcase__card-info {
+  background-color: $c-light-gray;
+  color: $c-middle-gray;
+  padding: 1rem;
+  border-radius: 0 0 15px 15px;
+
+  &__line {
+    display: flex;
+    justify-content: space-between;
+
+    &--symbol {
+      position: relative;
+    }
+
+    &--symbol::before {
+      position: absolute;
+      content: url("assets/eth.svg");
+      left: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
