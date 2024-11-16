@@ -6,6 +6,10 @@
   max-width: 1440px;
 }
 
+.ctn-desktop-padding {
+  padding-left: 7.5%;
+}
+
 .press {
   display: grid;
   align-items: end;
@@ -90,6 +94,7 @@
   &__cards {
     display: flex;
     gap: 25px;
+    overflow-x: scroll;
   }
   &__card {
     min-width: 290px;

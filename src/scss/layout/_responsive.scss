@@ -90,10 +90,13 @@
 // >>>>>>>>>>>>>>>>  DESKTOP >>>>>>>>>>>>>>>>
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 @media screen and (min-width: map.get($screen-dimensions, "desktop")) {
-  .ctn-desktop {
+  .ctn-desktop,
+  .ctn-desktop-padding {
+    padding: 0;
     margin: auto;
     width: 85%;
     max-width: 1440px;
+    overflow-x: hidden;
   }
 
   .press {
